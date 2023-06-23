@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body>
+    <style>
+      /* to remove act from local changes */
+      body div div div {
+        background: transparent !important;
+        border: 0 !important;
+      }
+    </style>
+    <div
+      class="logPage container-fluid d-flex justify-content-center align-items-center"
+    >
+      <div class="container log py-4 d-flex flex-column">
+        <form action="" class="d-flex flex-column align-items-center">
+          <h4 class="text-center">Login</h4>
+          <label for="user" class="user d-flex flex-column w-75 mx-auto mt-4">
+            Username
+            <input
+              type="text"
+              id="user"
+              class="my-2 border-0 py-1 px-2"
+              required
+              maxlength="12"
+            />
+          </label>
+          <label
+            for="password"
+            class="password d-flex flex-column w-75 mx-auto mt-2 mb-3"
+          >
+            Password
+            <input
+              type="password"
+              id="password"
+              class="my-2 border-0 py-1 px-2"
+              required
+              maxlength="10"
+            />
+          </label>
+          <a href="./home.html" class="registrationLink d-block w-75">
+            <input
+              type="submit"
+              value="Login"
+              class="submit bg-success text-white border-0 w-100 fw-bold py-1 px-2"
+            />
+          </a>
+        </form>
+        <p class="align-self-center mt-3 noRegistered">
+          No Registered!
+          <a href="./registration.html" class="text-decoration-none"
+            ><b class="noRegistered text-success">Create an account</b></a
+          >
+        </p>
+        <div class="remember d-flex align-content-center">
+          remember <input type="checkbox" class="ms-2" id="check" />
+        </div>
+      </div>
+    </div>
+    <div class="userPassLocal">
+      <p class="text-center">
+        We found your name is <b></b> and your password is <b></b><br />
+        Do you want to form them out ?
+      </p>
+      <div class="yesNo">
+        <button class="btn btn-success yes">Yes</button>
+        <button class="btn btn-danger no">No</button>
+      </div>
+    </div>
+    
+    <script>
+      const form = document.querySelector("form");
+      const registrationLink = document.querySelector(".registrationLink");
+      const check = document.getElementById("check");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        registrationLink.click();
+        if (check.className.includes("checked")) {
+          localStorage.setItem(
+            "userName",
+            document.getElementById("user").value
+          );
+          localStorage.setItem(
+            "PasswordName",
+            document.getElementById("password").value
+          );
+        }
+      });
+      check.addEventListener("click", (e) => {
+        e.target.classList.toggle("checked");
+      });
+
+      const userPassLocal = document.querySelector(".userPassLocal");
+      const userLocal = localStorage.getItem("userName");
+      const passwordLocal = localStorage.getItem("PasswordName");
+
+      if (userLocal && passwordLocal) {
+        userPassLocal.style.cssText = "display:flex;";
+        document.querySelector(".userPassLocal>p>b:first-child").innerHTML =
+          userLocal;
+        document.querySelector(".userPassLocal>p>b:nth-child(2)").innerHTML =
+          "*".repeat(passwordLocal.length);
+        //  fill the form
+        document.querySelector(".yes").addEventListener("click", () => {
+          document.getElementById("user").value = userLocal;
+          document.getElementById("password").value = passwordLocal;
+          userPassLocal.style.cssText = "display:none;";
+        });
+        document.querySelector(".no").addEventListener("click", () => {
+          userPassLocal.style.cssText = "display:none;";
+        });
+      }
+    </script>
+  </body>
+</html>

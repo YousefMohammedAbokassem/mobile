@@ -1,0 +1,52 @@
+{
+  "table": [
+    {
+      "title": "huawei p50 pro",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/huawei.jpg",
+      "price": "800$"
+    },
+    {
+      "title": "huawei p40 pro",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/huawei2.jpg",
+      "price": "800$"
+    },
+    {
+      "title": "iphone 14 pro",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/iphone2.jpg",
+      "price": "1200$"
+    },
+    {
+      "title": "iphone 14 pro max",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/iphone2.jpg",
+      "price": "1200$"
+    },
+    {
+      "title": "iphone 13 pro",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/iphone2.jpg",
+      "price": "1200$"
+    },
+    {
+      "title": "samsung galaxy s22 ultra",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/samsung.jpg",
+      "price": "1000$"
+    },
+    {
+      "title": "iphone 13",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/iphone.jpg",
+      "price": "1200$"
+    },
+    {
+      "title": "samsung s22",
+      "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+      "image": "./img/samsung2.jpg",
+      "price": "1000$"
+    }
+  ]
+}

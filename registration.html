@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moblie Sale</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: black;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    form {
+      margin: 25px;
+      border: 1px solid;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 10px #c0bdbdb3;
+    }
+    /* Add padding to containers */
+    .container {
+      padding: 16px;
+      background-color: white;
+    }
+
+    /* Full-width input fields */
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <form action="./home.html">
+      <div class="container">
+        <h1 class="text-center">Register</h1>
+        <p class="text-center">
+          Please fill out this form to create an account.
+        </p>
+        <hr />
+
+        <label for="email"><b>Email</b></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="psw"><b id="lablePass">Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="psw"
+          required
+        />
+
+        <label for="conpsw"><b id="lableConf">Confirm Password</b></label>
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          name="conpsw"
+          id="conpsw"
+          required
+        />
+
+        <label for="Age"><b>Age</b></label>
+        <input
+          type="number"
+          placeholder="Enter Age"
+          name="Age"
+          id="Age"
+          min="11"
+          required
+        />
+
+        <label for="birthday"><b>birthday</b></label>
+
+        <input
+          type="date"
+          placeholder="Enter birthday"
+          name="birthday"
+          id="birthday"
+          required
+        />
+        <label for="check" class="my-2" id="lableCheck">
+          <input type="checkbox" name="check" id="check" />
+          I agree
+        </label>
+        <div class="d-flex justify-content-evenly align-items-center gap-5">
+          <button type="submit" class="registerbtn btn btn-success w-50">
+            Registration
+          </button>
+          <button type="reset" class="btn btn-danger w-50">Clear</button>
+        </div>
+
+        <div
+          class="container mt-4 signin d-flex align-items-center justify-content-center"
+        >
+          <p class="m-0">
+            Already have an account? <a href="./index.html">Sign in</a>.
+          </p>
+        </div>
+      </div>
+    </form>
+
+    <!-- start go up  -->
+    <span class="goUp"><i class="fas fa-caret-square-up myButton"></i></span>
+
+    <!-- end go up  -->
+  </body>
+  <!-- start tilt -->
+  <script src="./tilt.js"></script>
+  <!-- end tilt -->
+  <script src="./all.js"></script>
+  <script>
+    let form = document.querySelector("form");
+    let pass = document.getElementById("psw");
+    let conpsw = document.getElementById("conpsw");
+    let lablePass = document.getElementById("lablePass");
+    let lableConf = document.getElementById("lableConf");
+    let lableCheck = document.getElementById("lableCheck");
+    let check = document.getElementById("check");
+    check.addEventListener("click", () => {
+      check.classList.toggle("check");
+    });
+    form.onsubmit = function (e) {
+      if (pass.value !== conpsw.value) {
+        window.alert("Password do not match");
+        e.preventDefault();
+        lablePass.style.color = "red";
+        lableConf.style.color = "red";
+      }
+      if (!check.classList.contains("check")) {
+        e.preventDefault();
+        window.alert("You must agree to the term");
+        lableCheck.style.color = "red";
+      }
+    };
+  </script>
+</html>
+<!-- end -->

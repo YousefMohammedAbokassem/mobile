@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moblie Sale</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <style>
+    table {
+      color: var(--text-color) !important;
+    }
+    td,
+    th {
+      border: 1px solid;
+    }
+    th {
+      text-align: center;
+    }
+    input {
+      outline: none;
+    }
+  </style>
+  <body>
+    <nav class="d-flex px-3 justify-content-between align-items-center">
+      <div class="logo">Yousef Store</div>
+      <ul
+        class="list-unstyled d-md-flex d-none mb-0 d-flex align-items-center justify-content-center myList"
+      >
+        <a class="text-decoration-none" href="./home.html"
+          ><li class="p-2">Home</li></a
+        >
+        <a class="text-decoration-none ms-3" href="./ourProduct.html"
+          ><li class="p-2">Our Products</li></a
+        >
+        <a class="text-decoration-none ms-3 click" href="./buy.html"
+          ><li class="p-2">Buy</li></a
+        >
+        <a class="text-decoration-none ms-3" href="./search.html"
+          ><li class="p-2">Search Product</li></a
+        >
+        <a class="text-decoration-none ms-3 active" href="./myCart.html"
+          ><li class="p-2">MyCart</li></a
+        >
+      </ul>
+      <div class="logMenu d-flex align-items-center justify-content-center">
+        <a
+          href="./index.html"
+          class="logOut text-uppercase text-decoration-none"
+          >logout</a
+        >
+        <span class="menu d-md-none d-flex ms-3 flex-column">
+          <span class="first"></span>
+          <span class="second mt-2"></span>
+          <span class="third mt-2"></span>
+        </span>
+      </div>
+      <ul
+        class="secondList position-absolute list-unstyled mb-0 myList d-md-none d-flex flex-column align-items-center justify-content-center w-100"
+      >
+        <a class="text-decoration-none" href="./home.html"
+          ><li class="p-2">Home</li></a
+        >
+        <a class="text-decoration-none ms-3" href="./ourProduct.html"
+          ><li class="p-2">Our Products</li></a
+        >
+        <a class="text-decoration-none ms-3" href="./buy.html"
+          ><li class="p-2">Buy</li></a
+        >
+        <a class="text-decoration-none ms-3" href="./search.html"
+          ><li class="p-2">Search Product</li></a
+        >
+        <a class="text-decoration-none ms-3 active" href="./myCart.html"
+          ><li class="p-2">MyCart</li></a
+        >
+      </ul>
+    </nav>
+    <!-- start go up  -->
+    <span class="goUp"><i class="fas fa-caret-square-up myButton"></i></span>
+    <!-- end go up  -->
+    <div>
+      <h2 class="text-center p-4">My Shopping Cart</h2>
+      <form action="">
+        <div
+          class="d-flex flex-column flex-lg-row justify-content-evenly align-items-center my-2 px-lg-5 px-0"
+        >
+          <label
+            for="nameItem"
+            class="d-lg-inline-block d-flex flex-column w-75"
+          >
+            <span>Enter Phone Name :</span>
+            <input
+              type="text"
+              id="nameItem"
+              class="p-2 my-2 ms-1"
+              placeholder="Type Your Phone Name"
+            />
+          </label>
+          <label
+            for="quantity"
+            class="d-lg-inline-block d-flex flex-column w-75 my-2 my-lg-0"
+            ><span>Quantity :</span>
+            <input
+              min="1"
+              type="number"
+              id="quantity"
+              class="p-2 my-2 ms-1"
+              placeholder="How Many Item"
+            />
+          </label>
+          <span
+            class="btn btn-success fw-bold buy d-flex align-items-center my-2 my-lg-0 px-4 py-2 px-lg-3 py-lg-2"
+            >Buy</span
+          >
+        </div>
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Delete</th>
+          </tr>
+        </table>
+        <div class="data-show text-capitalize text-center my-2 fw-bold fs-3">
+          Please Enter Your Option
+        </div>
+        <input
+          type="submit"
+          value="Check Out"
+          class="bg-success fw-bold text-white border-0 p-2 m-auto d-block"
+        />
+      </form>
+    </div>
+    <!-- option start -->
+    <div class="position-fixed option h-100 goLeft">
+      <div class="d-flex justify-content-evenly align-items-center mt-4">
+        <span
+          data-color1="#fff"
+          data-color2="#111"
+          class="firstSpan actSpan opSpan"
+        ></span>
+        <span
+          data-color1="#111"
+          data-color2="#fff"
+          class="secondSpan opSpan"
+        ></span>
+      </div>
+      <span class="show"><i class="fa fa-gear"></i></span>
+    </div>
+    <!-- option end -->
+  </body>
+  <!-- start tilt -->
+  <script src="./tilt.js"></script>
+  <!-- end tilt -->
+  <script src="./all.js"></script>
+  <script>
+    // to stop load on click
+    let form = document.querySelector("form");
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      let prices = document.querySelectorAll(".prices");
+      // let quantities=document.querySelectorAll('.quantities')
+      let sum = 0;
+      prices.forEach((price, i) => {
+        let pri = parseInt(price.innerHTML);
+
+        sum += pri;
+      });
+      localStorage.setItem("price", sum);
+      setTimeout(() => {
+        alert("thank you");
+        setTimeout(() => {
+          document.querySelector(".click").click();
+        }, 0);
+      }, 0);
+    };
+
+    let table = document.querySelector("table");
+    let buttons = document.querySelectorAll(".delete");
+    //
+    let searchInp = document.getElementById("nameItem");
+    let quantity = document.getElementById("quantity");
+    let mySearchBtn = document.querySelector(".mySearchBtn");
+    let dataShow = document.querySelector(".data-show");
+    // let myTable = document.querySelector(".tab")
+    //
+    let buy = document.querySelector(".buy");
+    buy.addEventListener("click", () => {
+      getInfo();
+    });
+
+    function getInfo() {
+      if (searchInp.value == "" || quantity.value == "") {
+        dataShow.innerHTML =
+          "<div class='border-0'>Please Enter Your Option</div>";
+      } else {
+        fetch("./js/main.json")
+          .then((response) => response.json())
+          .then((item) => {
+            let phones = item.table;
+            for (let index = 0; index < phones.length; index++) {
+              // delete the spaces before and after and make the letters lower case because in json file the letters are small
+              if (searchInp.value.toLowerCase().trim() == phones[index].title) {
+                let tr = document.createElement("tr");
+                // table.classList.add("myTable");
+                // table.classList.add("w-100");
+                // table.classList.add("mt-3");
+                tr.innerHTML = `
+                <tr>
+                <td class="text-capitalize p-2">${searchInp.value}</td>
+                <td class="prices p-2" >${
+                  parseInt(phones[index].price) * quantity.value
+                }$</td>
+                <td class="quantities p-2">${quantity.value}</td>
+                <td class="btn btn-danger delete bg-danger d-block p-2">Delete</td>
+                </tr>
+                `;
+                table.appendChild(tr);
+                searchInp.value = "";
+                quantity.value = "";
+
+                // do not show sorry ...
+                // to empty span even it complete in json array after catch the point
+                dataShow.innerHTML = "";
+                //delete the item after click
+                let del = document.querySelectorAll(".delete");
+                del.forEach((ele) => {
+                  ele.addEventListener("click", (e) => {
+                    ele.parentElement.remove();
+                    let tds = document.querySelectorAll("td");
+                    // if no data will show return the sentence
+                    if (!tds.length) {
+                      dataShow.innerHTML =
+                        "<div class='border-0'>Please Enter Your Option</div>";
+                    }
+                  });
+                });
+                break;
+              } else {
+                dataShow.innerHTML =
+                  "<div class='text-danger border-0' >Sorry, we do not have this item</div>";
+              }
+            }
+          });
+      }
+    }
+  </script>
+</html>
+<!-- end -->
