@@ -22,6 +22,10 @@
     .images {
       cursor: pointer;
     }
+    table tr:nth-child(odd) {
+      background-color: #a8a8a8;
+      color: black;
+    }
   </style>
   <body>
     <nav class="d-flex px-3 justify-content-between align-items-center">
@@ -79,7 +83,7 @@
     </nav>
     <!-- start table -->
     <div class="tab">
-      <table class="myTable w-100 mt-3">
+      <table class="myTable w-100">
         <tr>
           <th>Title</th>
           <th>Description</th>
@@ -131,8 +135,13 @@
           myTable.appendChild(row);
         });
       });
-
-    window.onload = () => {
+    window.addEventListener("load", function () {
+      // to be sure to end fetch
+      setTimeout(() => {
+        imageClick();
+      }, 2000);
+    });
+    function imageClick() {
       let photos = document.querySelectorAll(".images");
       photos.forEach((img) => {
         img.addEventListener("click", (ele) => {
@@ -156,7 +165,7 @@
           });
         });
       });
-    };
+    }
   </script>
 </html>
 <!-- end -->

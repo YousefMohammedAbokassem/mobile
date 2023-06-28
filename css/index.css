@@ -311,12 +311,11 @@ nav ul:last-child li {
 .popup > div span {
   color: white;
   cursor: pointer;
+  padding: 2%;
   background: black;
-  width: 30px;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  height: 30px;
   left: 0;
   position: absolute;
   top: 2px;

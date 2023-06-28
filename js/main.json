@@ -13,10 +13,10 @@
       "price": "800$"
     },
     {
-      "title": "iphone 14 pro",
+      "title": "samsung galaxy s22 ultra",
       "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
-      "image": "./img/iphone2.jpg",
-      "price": "1200$"
+      "image": "./img/samsung3.jpg",
+      "price": "1000$"
     },
     {
       "title": "iphone 14 pro max",
@@ -31,7 +31,7 @@
       "price": "1200$"
     },
     {
-      "title": "samsung galaxy s22 ultra",
+      "title": "samsung s22 ultra",
       "description": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
       "image": "./img/samsung.jpg",
       "price": "1000$"
